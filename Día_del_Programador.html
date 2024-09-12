@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día_del_Programador</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #515151;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    h1 {
+        font-family: 'Lucida Sans Unicode';
+        color: #fff;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .desk {
+      width: 400px;
+      height: 200px;
+      background-color: #066e1d;
+      border-radius: 5px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgb(0, 0, 0);
+    }
+
+    .computer {
+      width: 120px;
+      height: 100px;
+      background-color: #2f2e2e;
+      border-radius: 5px;
+      position: relative;
+      animation: float 3s infinite alternate ease-in-out;
+    }
+
+    .computer:before {
+      content: '';
+      width: 110px;
+      height: 70px;
+      background-color: #fff;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      border-radius: 3px;
+    }
+
+    .computer:after {
+      content: '';
+      width: 80px;
+      height: 10px;
+      background-color: #373737;
+      position: absolute;
+      bottom: -20px;
+      left: 20px;
+      border-radius: 5px;
+    }
+
+    .coffee {
+      width: 40px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 10% 10% 50% 50%;
+      position:relative;
+      border: 2px solid #333;
+     animation: steam 3s infinite ease-in-out;
+    }
+
+    /*.coffee:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: #8B4513;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+    }
+*/
+    .coffee:after {
+      content: '';
+      width: 20px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.4);
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      border-radius: 50%;
+      animation: steam-rise 2s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-13px); }
+    }
+
+    @keyframes steam {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(-15px); opacity: 1; }
+    }
+
+    @keyframes steam-rise {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>¡Feliz día del programador!</h1>
+
+  <div class="desk">
+    <div class="computer"></div>
+    <div class="coffee"></div>
+  </div>
+  <audio autoplay loop>
+    <source src="C:\Users\Israel Imeri\Downloads\HTML\Mp3\WiiParty" type="audio/mpeg">
+    Tu navegador no soporta la etiqueta de audio.
+  </audio>
+
+</body>
+</html>
